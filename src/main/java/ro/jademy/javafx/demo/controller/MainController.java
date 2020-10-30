@@ -34,8 +34,11 @@ public class MainController {
 
         Pane users = FXMLLoader.load(getClass().getResource("/fxml/users.fxml"));
 
+        Pane tableView = FXMLLoader.load(getClass().getResource("/fxml/tableViewDB.fxml"));
+
         mainContainer.addEventHandler(ViewChangeEvent.DASHBOARD, viewChangeEvent -> mainContainer.setCenter(dashboard));
         mainContainer.addEventHandler(ViewChangeEvent.USERS, viewChangeEvent -> mainContainer.setCenter(users));
+        mainContainer.addEventHandler(ViewChangeEvent.TABLE_VIEW, viewChangeEvent -> mainContainer.setCenter(tableView));
         mainContainer.addEventHandler(TaskEvent.LONG_RUNNING_TASK, taskEvent -> {
             // receive event in the main controller and pass it down to the status bar
             // this is needed because of event bubbling. read more here: https://docs.oracle.com/javase/8/javafx/events-tutorial/processing.htm

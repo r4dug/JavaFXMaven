@@ -8,6 +8,7 @@
    <children>
       <Button fx:id="dashboard" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Dashboard" />
       <Button fx:id="users" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Users" />
+      <Button fx:id="tableView" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="TableView" />
    </children>
    <padding>
       <Insets top="20.0" />

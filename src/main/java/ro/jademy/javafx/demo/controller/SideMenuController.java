@@ -13,6 +13,8 @@ public class SideMenuController {
     private Button dashboard;
     @FXML
     private Button users;
+    @FXML
+    private Button tableView;
 
     @FXML
     private void initialize() throws IOException {
@@ -29,6 +31,14 @@ public class SideMenuController {
             System.out.println("Changing view to users");
 
             ViewChangeEvent dashboardChangeEvent = new ViewChangeEvent(ViewChangeEvent.USERS);
+            dashboard.fireEvent(dashboardChangeEvent);
+        });
+
+        // show table view pane
+        tableView.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
+            System.out.println("Changing view to table view");
+
+            ViewChangeEvent dashboardChangeEvent = new ViewChangeEvent(ViewChangeEvent.TABLE_VIEW);
             dashboard.fireEvent(dashboardChangeEvent);
         });
     }

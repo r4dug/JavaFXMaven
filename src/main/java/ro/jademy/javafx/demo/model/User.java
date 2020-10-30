@@ -1,5 +1,7 @@
 package ro.jademy.javafx.demo.model;
 
+import javafx.beans.property.SimpleStringProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +10,11 @@ public class User {
     private String lastName;
     private String email;
     private List<Role> roles = new ArrayList<>();
+
+    public SimpleStringProperty firstNameColumn = new SimpleStringProperty();
+    public SimpleStringProperty lastNameColumn = new SimpleStringProperty();
+    public SimpleStringProperty userNameColumn = new SimpleStringProperty();
+    public SimpleStringProperty passwordColumn = new SimpleStringProperty();
 
     public User(String firstName, String lastName, String email, Role role) {
         this.firstName = firstName;
@@ -22,6 +29,8 @@ public class User {
         this.email = email;
         this.roles = roles;
     }
+
+    public User() {}
 
     public String getFirstName() {
         return firstName;

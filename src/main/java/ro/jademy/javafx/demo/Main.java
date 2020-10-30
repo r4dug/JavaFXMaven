@@ -11,6 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
+    //    Parent root = FXMLLoader.load(getClass().getResource("/fxml/tableViewDB.fxml"));
         primaryStage.setTitle("JavaFX Demo Application");
         primaryStage.setScene(new Scene(root, 1024, 640));
         primaryStage.setMinHeight(600);
